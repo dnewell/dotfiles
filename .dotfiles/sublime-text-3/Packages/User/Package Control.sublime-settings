@@ -1,0 +1,24 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"ClangAutoComplete",
+		"Clickable URLs",
+		"Colorsublime",
+		"Comment-Snippets",
+		"DocBlockr",
+		"GitGutter",
+		"Package Control",
+		"SublimeAStyleFormatter",
+		"SublimeLinter",
+		"SublimeLinter-contrib-clang",
+		"Theme - Spacegray",
+		"Themr",
+		"VintageLines"
+	]
+}

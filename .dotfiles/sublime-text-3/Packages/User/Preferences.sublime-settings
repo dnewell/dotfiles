@@ -1,0 +1,41 @@
+{
+	"added_words":
+	[
+		"recv",
+		"struct"
+	],
+	"always_show_minimap_viewport": true,
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/SublimeLinter/Acai (SL).tmTheme",
+	"enable_tab_scrolling": false,
+	"ensure_newline_at_eof_on_save": true,
+	"find_selected_text": true,
+	"font_face": "Hasklig Light",
+	"font_size": 22,
+	"highlight_line": false,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+	],
+	"ignored_words":
+	[
+		"rv",
+		"º¤ø"
+	],
+	"indent_guide_options":
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"line_padding_bottom": 3,
+	"line_padding_top": 3,
+	"scroll_past_end": true,
+	"spacegray_sidebar_font_xlarge": true,
+	"spacegray_sidebar_tree_xlarge": true,
+	"spacegray_tabs_auto_width": true,
+	"spacegray_tabs_font_xlarge": true,
+	"spacegray_tabs_xlarge": true,
+	"spell_check": true,
+	"theme": "Spacegray Eighties.sublime-theme",
+	"word_wrap": true
+}

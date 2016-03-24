@@ -1,0 +1,182 @@
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/david/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="nicoulaj"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+# User configuration
+
+  export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias l='ls -ltAFh'
+alias -g L=' | less'
+alias c='clear'
+alias g='googler'
+
+alias lo='sudo pkill -u david'              #logout
+alias sd='sudo shutdown --poweroff now'
+alias rb='sudo shutdown --reboot now'
+
+alias cp='cp -i'
+alias mv='mv -i'
+
+alias saar='sudo add-apt-repository'
+alias sagi='sudo apt-get install'
+alias sagu='sudo apt-get update'
+
+alias reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+alias d-4k="xrandr --output Virtual1 --mode 4k"
+alias d-hd="xrandr --output Virtual1 --mode 1920x1440"
+alias d-5b4="xrandr --output Virtual1 --mode 1600x1200"
+alias d-fhd="xrandr --output Virtual1 --mode 1080p"
+alias d-ssd="xrandr --output VGA1 --mode 1080p"
+alias d-ssd30="xrandr --output VGA1 --mode 1080p30hz"
+
+alias 4k-newmode="xrandr --newmode '4k'  712.75  3840 4160 4576 5312  2160 2163 2168 2237 -hsync +vsync"
+alias fhd-newmode="xrandr --newmode "1080p"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync"
+alias fhd30-newmode="xrandr --newmode "1080p30hz"  79.75  1920 1976 2168 2416  1080 1083 1088 1102 -hsync +vsync"
+
+
+alias 4k-addmode="xrandr --addmode Virtual1 4k"
+alias ssd-addmode="xrandr --addmode VGA1 1080p"
+alias ssd30-addmode="xrandr --addmode VGA1 1080p30hz"
+
+alias zshrc='subl ~/.zshrc'                     # Quick access to the ~/.zshrc file
+alias wb='exo-open --launch WebBrowser'
+alias umail='wb https://outlook.office365.com'
+alias gmail='wb https://mail.google.com'
+alias github='wb http://www.github.com/dnewell'
+alias w3342="wb http://www.csd.uwo.ca/~webber/CS3342/2016b/"
+alias w3305="wb http://www.csd.uwo.ca/courses/CS3305b/"
+alias w1011="wb http://williamjturkel.net/teaching/digital-humanities-1011b-programming-winter-2016/"
+alias a3="cd /mnt/hgfs/X/3305_a3/"
+
+# Plugins
+plugins=(debian)
+
+# zsh is able to auto-do some kungfoo
+# depends on the SUFFIX :)
+if is-at-least 4.2.0; then
+  # open browser on urls
+  _browser_fts=(htm html de org net com at cx nl se dk dk php)
+  for ft in $_browser_fts ; do alias -s $ft=$BROWSER ; done
+
+  _editor_fts=(cpp cxx cc c hh h inl asc txt TXT tex)
+  for ft in $_editor_fts ; do alias -s $ft=$EDITOR ; done
+
+  _image_fts=(jpg jpeg png gif mng tiff tif xpm)
+  for ft in $_image_fts ; do alias -s $ft=$XIVIEWER; done
+
+  _media_fts=(ape avi flv mkv mov mp3 mpeg mpg ogg ogm rm wav webm)
+  for ft in $_media_fts ; do alias -s $ft=mplayer ; done
+
+  #read documents
+  alias -s pdf=mupdf
+  alias -s ps=gv
+  alias -s dvi=xdvi
+  alias -s chm=xchm
+  alias -s djvu=djview
+
+  #list whats inside packed file
+  alias -s zip="unzip -l"
+  alias -s rar="unrar l"
+  alias -s tar="tar tf"
+  alias -s tar.gz="echo "
+  alias -s ace="unace l"
+fi
+
+#Custom
+
+# want your terminal to support 256 color schemes? I do ...
+export TERM="xterm-256color"
+
+# if you do a 'rm *', Zsh will give you a sanity check!
+setopt RM_STAR_WAIT
+
+# allows you to type Bash style comments on your command line
+# good 'ol Bash
+setopt interactivecomments
+
+# Zsh has a spelling corrector
+setopt CORRECT
+
+#Vi Mode
+bindkey -v
+export KEYTIMEOUT=1
+

@@ -1,0 +1,1 @@
+{"version": "2.0.2", "url": "https://github.com/pl-ca/ClangAutoComplete", "platforms": ["*"], "sublime_text": ">=3000", "dependencies": [], "description": "Sublime Text 3 plugin that offers auto-completion of C/C++ structure members or class attributes and methods."}
